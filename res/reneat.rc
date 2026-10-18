@@ -1,0 +1,53 @@
+/* resource script — icons unpacked from NeatDM.exe + its manifest */
+#include <windows.h>
+
+101 ICON "extracted\\icon_101.ico"   /* app 32px */
+102 ICON "extracted\\icon_102.ico"   /* app 16px */
+103 ICON "extracted\\icon_103.ico"   /* app 64px */
+104 ICON "extracted\\icon_104.ico"   /* folder */
+105 ICON "extracted\\icon_105.ico"   /* video file */
+106 ICON "extracted\\icon_106.ico"   /* audio file */
+107 ICON "extracted\\icon_107.ico"   /* document file */
+108 ICON "extracted\\icon_108.ico"   /* add + */
+109 ICON "extracted\\icon_109.ico"   /* play / resume */
+110 ICON "extracted\\icon_110.ico"   /* stop / pause */
+111 ICON "extracted\\icon_111.ico"   /* remove x */
+112 ICON "extracted\\icon_112.ico"   /* settings gear */
+113 ICON "extracted\\icon_113.ico"   /* info */
+114 ICON "extracted\\icon_114.ico"   /* power/quit */
+119 ICON "extracted\\icon_119.ico"   /* status dot */
+121 ICON "extracted\\icon_121.ico"   /* chrome */
+122 ICON "extracted\\icon_122.ico"   /* edge */
+123 ICON "extracted\\icon_123.ico"   /* firefox */
+124 ICON "extracted\\icon_124.ico"   /* opera */
+
+1 24 "extracted\\manifest.xml"
+
+1 VERSIONINFO
+FILEVERSION 0,2,0,0
+PRODUCTVERSION 0,2,0,0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0x0L
+FILEOS 0x40004L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "Wu Huihuan"
+            VALUE "FileDescription", "reneat Download Manager"
+            VALUE "FileVersion", "0.2.0.0"
+            VALUE "InternalName", "reneat"
+            VALUE "LegalCopyright", "Copyright (C) 2026 Wu Huihuan"
+            VALUE "OriginalFilename", "reneat.exe"
+            VALUE "ProductName", "reneat Download Manager"
+            VALUE "ProductVersion", "0.2.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END

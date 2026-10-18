@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 240px; font-family: "Segoe UI", sans-serif; margin: 0; padding: 14px; }
+  .row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  img { width: 32px; height: 32px; }
+  .title { font-weight: 600; font-size: 14px; }
+  .status { font-size: 12px; }
+  .ok { color: #1a9850; }
+  .bad { color: #d63031; }
+  label { font-size: 13px; display: flex; align-items: center; gap: 6px; cursor: pointer; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <img src="icons/icon48.png">
+    <div>
+      <div class="title">reneat Download Manager</div>
+      <div class="status" id="status">…</div>
+    </div>
+  </div>
+  <div class="row">
+    <label><input type="checkbox" id="enabled"> 接管浏览器下载 / Intercept downloads</label>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

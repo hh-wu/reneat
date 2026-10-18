@@ -1,0 +1,18 @@
+# build artifacts
+*.o
+*.d
+reneat.exe
+
+# runtime data
+reneat.log
+reneat.log.1
+tasks.dat
+*.segments.bin
+ws-test-file.bin
+
+# OS noise
+Thumbs.db
+.DS_Store
+
+.tmp/
+.shots/

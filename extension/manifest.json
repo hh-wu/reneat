@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "reneat Download Manager",
+  "version": "0.1.0",
+  "description": "把浏览器下载交给 reneat 下载管理器（本机 WebSocket 接管，支持分段加速）。Hand off browser downloads to reneat via local WebSocket.",
+  "permissions": ["downloads", "cookies", "contextMenus", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

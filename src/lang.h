@@ -1,0 +1,55 @@
+/* lang.h — tiny bilingual string table (en/zh) */
+#ifndef RENEAT_LANG_H
+#define RENEAT_LANG_H
+#include <wchar.h>
+
+typedef enum {
+    /* toolbar */
+    L_NEW_URL, L_RESUME, L_STOP, L_DELETE, L_SETTINGS, L_BROWSERS, L_ABOUT, L_QUIT,
+    /* sidebar / categories */
+    L_CAT_ALL, L_CAT_VIDEO, L_CAT_AUDIO, L_CAT_COMPRESSED, L_CAT_DOCUMENT,
+    L_CAT_APPLICATION, L_CAT_MISC, L_CAT_COMPLETE, L_CAT_INCOMPLETE,
+    /* list columns */
+    L_COL_NAME, L_COL_SIZE, L_COL_STATUS, L_COL_BANDWIDTH, L_COL_REMAINING, L_COL_LASTTRY,
+    /* status texts */
+    L_ST_CONNECTING, L_ST_QUEUED, L_ST_DOWNLOADING, L_ST_PAUSED, L_ST_COMPLETE,
+    L_ST_ERROR, L_ST_CANCELED,
+    /* remaining time */
+    L_TIME_HR_MIN, L_TIME_MIN_SEC, L_TIME_SEC,
+    /* context menu */
+    L_CM_REDOWNLOAD, L_CM_SHOWWIN, L_CM_OPENFOLDER, L_CM_OPEN, L_CM_PROPERTIES,
+    L_DELETE_CONFIRM,
+    /* browsers menu */
+    L_EXT_CHROME, L_EXT_EDGE, L_EXT_FIREFOX, L_EXT_OPERA,
+    /* progress window */
+    L_TAB_DOWNLOAD, L_TAB_OPTIONS, L_TAB_CONNECTIONS,
+    L_PW_FILESIZE, L_PW_DOWNLOADED, L_PW_BANDWIDTH, L_PW_REMAINING, L_PW_RESUMABLE,
+    L_YES, L_NO, L_PAUSE, L_CANCEL, L_APPLY,
+    L_OPT_NOLIMIT, L_OPT_LIMIT_TO, L_OPT_KBSEC, L_OPT_REMEMBER, L_OPT_SHOWCOMP,
+    L_CONN_NO, L_CONN_RECEIVING, L_CONN_COMPLETED, L_CONN_WAITING, L_SEGMENTS,
+    /* new download dialog */
+    L_ND_TITLE, L_ND_ADDRESS, L_ND_SAVETO, L_ND_CONN, L_ND_START, L_ND_BADURL,
+    /* settings dialog */
+    L_SET_TITLE, L_TAB_GENERAL, L_TAB_PROXY, L_TAB_PASSWORDS,
+    L_SG_MAXCONN, L_SG_RECOMMENDED, L_SG_WHEN1ST, L_SG_ALLATONCE, L_SG_ONEBYONE,
+    L_SG_BWLIMIT, L_SG_NOLIMIT, L_SG_UA, L_SG_UAFORALL, L_SG_DLDIR, L_SG_CATFOLDERS,
+    L_SG_TMPDIR, L_SG_SHOWCOMP, L_SG_STARTUP, L_SG_LANGUAGE,
+    L_SP_NOPROXY, L_SP_HTTP, L_SP_SOCKS, L_SP_V5, L_SP_V4,
+    L_SP_ADDR, L_SP_PORT, L_SP_USER, L_SP_PASS, L_SP_HTTPS, L_SP_FTP,
+    L_PW_PROTOCOL, L_PW_TARGET, L_PW_EMPTY, L_REMOVE,
+    /* about */
+    L_ABOUT_TITLE, L_ABOUT_LICENSE, L_ABOUT_WEBSITE, L_ABOUT_CHECK,
+    /* properties */
+    L_PROP_TITLE, L_PROP_SAVEDTO, L_PROP_URL, L_PROP_ADDED, L_OK,
+    /* completion dialog */
+    L_COMP_TITLE, L_COMP_CLOSE,
+    /* tray + clipboard */
+    L_TRAY_SHOW, L_SG_CLIP,
+    L_COUNT
+} LangId;
+
+/* current language: 0 = English, 1 = 中文 */
+void lang_init(void);
+const wchar_t *L(int id);
+
+#endif
